@@ -11,6 +11,7 @@ function App() {
   const [type, setType] = useState("");
   useEffect(() => {
     fetchItem();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [param]);
 
   const base_URL = `http://numbersapi.com/${param}/${type}`;
