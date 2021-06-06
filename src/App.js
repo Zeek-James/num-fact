@@ -13,14 +13,12 @@ function App() {
     fetchItem();
   }, [param]);
 
-  const base_URL = `https://numbersapi.com/${param}/${type}`;
+  const base_URL = `http://numbersapi.com/${param}/${type}`;
 
   const fetchItem = async () => {
     const res = await axios(base_URL);
     setIsLoading(true);
-    console.log(false);
     setItem(res.data);
-    console.log(true);
     setIsLoading(false);
   };
 
